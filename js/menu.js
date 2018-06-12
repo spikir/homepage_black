@@ -1,12 +1,10 @@
 $(document).ready(function(){
-	var active = "";
 	var array = [];
 	
 	
 	$(".navi li a").click(function(){
-		$(active).removeClass("active");
+		$(".navi").find(".active").removeClass('active');
 		$(this).parent().addClass("active");
-		active = $(this).parent();
 		$('html, body').animate({
 			scrollTop: $($.attr(this, 'href')).offset().top - 50
 		}, 500);
@@ -20,11 +18,11 @@ $(document).ready(function(){
 		windowPos = $(window).scrollTop();
 		array.forEach(function(item) {
 			if(windowPos>=$(item).offset().top-70) {
-				$('.navi li').find('.active').removeClass('active');
-				$('.navi li a[href="'+item+'"]').addClass("active");
-			} else if(windowPos==$(document).height() - $(window).height() ) {
-				$('.navi li').find('.active').removeClass('active');
-				$('.navi li a[href="#contact"]').addClass("active");
+				$('.navi').find('.active').removeClass('active');
+				$('.navi li a[href="'+item+'"]').parent().addClass("active");
+			} else if(windowPos==$(document).height() - $(window).height() || windowPos==$(document).height() - $(window).height()-1) {
+				$('.navi').find('.active').removeClass('active');
+				$('.navi li a[href="#contact"]').parent().addClass("active");
 			}
 		});
 	});
