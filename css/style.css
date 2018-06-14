@@ -83,6 +83,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
+	opacity: 0;
 }
 
 #about h1 {
@@ -98,6 +99,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
+	opacity: 0;
 }
 
 #portfolio h1 {
@@ -117,6 +119,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
+	opacity: 0;
 }
 
 #contact h1 {
@@ -183,6 +186,11 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+
+.containerport h3 {
+	margin: 0;
 }
 
 .innerleft span {
@@ -349,11 +357,11 @@ span a {
 	
 	.innerright img {
 		float: right;
-		margin: 30px 30px 30px 15px;
+		margin: 0px 30px 30px 15px;
 	}
 	
 	.innerleft img {
 		float: left;
-		margin: 30px 15px 30px 30px;
+		margin: 0px 15px 30px 30px;
 	}
 }
