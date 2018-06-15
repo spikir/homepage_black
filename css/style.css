@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	background-color: #000000;
 	height: 100%;
+	font-family: 'Cormorant', serif;
 }
 
 .wrap {
@@ -15,12 +16,23 @@ body {
 }
 
 #particles-js {
-	height: 100%;
+	height:100vh;
 	width: 100%;
 	background-color: #000000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+
+.scrolldown {
+	position: absolute;
+	bottom: 0;
+	background-image: url('../img/scroll.gif');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
 }
 
 #particles-js h1 {
@@ -74,19 +86,24 @@ body {
 	background-color: #696969;
 }
 
+#home {
+	height: auto;
+}
+
 #about {
 	color: #FFFFFF;
 	background-color: #303030;
 	width: 80%;
 	height: auto;
-	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
 	opacity: 0;
+	overflow: hidden;
 }
 
 #about h1 {
+	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -95,14 +112,15 @@ body {
 	background-color: #303030;
 	width: 80%;
 	height: auto;
-	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
 	opacity: 0;
+	overflow: hidden;
 }
 
 #portfolio h1 {
+	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -115,14 +133,15 @@ body {
 	background-color: #303030;
 	width: 80%;
 	height: auto;
-	overflow: auto;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 30px;
 	opacity: 0;
+	overflow: hidden;
 }
 
 #contact h1 {
+	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -135,6 +154,8 @@ body {
 
 #contact input {
 	width: calc(80% - 60px);
+	width: -moz-calc(80% - 60px);
+	width: -webkit-calc(80% - 60px);
 	float: left;
 	box-sizing: border-box;
 	margin: 10px 30px 10px 0px;
@@ -142,12 +163,16 @@ body {
 
 #contact textarea {
 	width: calc(80% - 60px);
+	width: -moz-calc(80% - 60px);
+	width: -webkit-calc(80% - 60px);
 	box-sizing: border-box;
 	margin: 10px 30px 10px 0px;
 }
 
 #contact input[type=submit] {
 	margin-left: calc(20% + 30px);
+	margin-left: -moz-calc(20% + 30px);
+	margin-left: -webkit-calc(20% + 30px);
 	margin-bottom: 30px;
 }
 
@@ -162,10 +187,29 @@ body {
 
 .profiletext {
 	width: calc(100% - 400px);
+	width: -moz-calc(100% - 400px);
+	width: -webkit-calc(100% - 400px);
 	margin: 10px 30px 10px 10px;
 }
+
 .profiletext p {
 	margin: 0;
+}
+
+.firstSentence {
+	color: hsl(350, 100%, 62%);
+}
+
+.secondSentence {
+	color: hsl(340, 100%, 62%);
+}
+
+.thirdSentence {
+	color: hsl(278, 100%, 68%);
+}
+
+.forthSentence {
+	color: hsl(226, 93%, 66%);
 }
 
 .footer {
@@ -186,11 +230,21 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	overflow: auto;
 }
-
 
 .containerport h3 {
 	margin: 0;
+}
+
+.innerright img {
+	width: 100%;
+	height: auto;	
+}
+	
+.innerleft img {
+	width: 100%;
+	height: auto;
 }
 
 .innerleft span {
@@ -216,6 +270,7 @@ body {
 
 span a {
 	color: #FFFFFF;
+	text-decoration: none;
 }
 
 .contactphoto {
@@ -230,8 +285,6 @@ span a {
 .clear {
 	clear: both;
 }
-
-
 
 @media only screen and (max-width: 992px) {
 	#particles-js h1 {
@@ -267,6 +320,11 @@ span a {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	
+	.scrolldown {
+		width: 100px;
+		height: 100px;
+	}
 } 
 
 @media only screen and (max-width: 600px) {
@@ -298,14 +356,25 @@ span a {
 	
 	#contact input {
 		width: calc(70% - 60px);
+		width: -moz-calc(70% - 60px);
+		width: -webkit-calc(70% - 60px);
 	}
 	
 	#contact textarea {
 		width: calc(70% - 60px);
+		width: -moz-calc(70% - 60px);
+		width: -webkit-calc(70% - 60px);
 	}
 	
 	#contact input[type=submit] {
 		margin-left: calc(30% + 30px);
+		margin-left: -moz-calc(30% + 30px);
+		margin-left: -webkit-calc(30% + 30px);
+	}
+	
+	.scrolldown {
+		width: 75px;
+		height: 75px;
 	}
 }
 
@@ -322,6 +391,8 @@ span a {
 	
 	.innerright img {
 		width: calc(100% - 45px);
+		width: -moz-calc(100% - 45px);
+		width: -webkit-calc(100% - 45px);
 		margin: 0px 30px 30px 15px;
 		float: right;
 		
@@ -329,17 +400,23 @@ span a {
 	
 	.innerleft img {
 		width: calc(100% - 45px);
+		width: -moz-calc(100% - 45px);
+		width: -webkit-calc(100% - 45px);
 		margin: 0px 15px 30px 30px;
 		float: left;
 	}
 	
 	#contact input {
 		width: calc(80% - 30px);
+		width: -moz-calc(80% - 30px);
+		width: -webkit-calc(80% - 30px);
 		margin: 10px 0px 10px 0px;
 	}
 	
 	#contact textarea {
 		width: calc(80% - 30px);
+		width: -moz-calc(80% - 30px);
+		width: -webkit-calc(80% - 30px);
 		margin: 10px 0px 10px 0px;
 	}
 }
