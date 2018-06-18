@@ -21,10 +21,10 @@ $(document).ready(function(){
 		slidearr.push([$(this).attr("href"), false]);
 	});
 	
-	$('html, body').animate({ 
-		scrollTop: 0
+	$(window).on('beforeunload', function() {
+		$(window).scrollTop(0);
 	});
-	
+
 	function findIndex(valueToSearch, array) {
 		if(Array.isArray(array)) {
 			for(var i = 0; i < array.length; i++) {
@@ -42,7 +42,7 @@ $(document).ready(function(){
 		}
 	}
 	
-	$(document).scroll(function() {
+	$(document).scroll(function(e) {
 		windowPos = $(window).scrollTop();
 		array.forEach(function(item) {
 			if(windowPos>=$(item).offset().top-700) {
