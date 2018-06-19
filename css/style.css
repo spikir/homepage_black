@@ -35,6 +35,20 @@ body {
 	height: 200px;
 }
 
+.backtotop {
+	position: fixed;
+	bottom: 50%;
+	right: 0;
+	background-image: url('../img/back_to_top_icon_regular.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 75px;
+	height: 75px;
+	z-index: 99;
+	opacity: 0;
+	cursor: pointer;
+}
+
 #particles-js h1 {
 	color: #FFFFFF;
 	position: absolute;
@@ -100,6 +114,8 @@ body {
 	margin-top: 30px;
 	opacity: 0;
 	overflow: hidden;
+	border-top-left-radius: 100%100px;
+	border-top-right-radius: 100%100px;  
 }
 
 #about h1 {
@@ -170,6 +186,31 @@ body {
 	box-sizing: border-box;
 	margin: 10px 30px 10px 0px;
 	padding: 5px 5px 5px 5px;
+	font-family: 'Cormorant', serif;
+}
+
+#social {
+	color: #FFFFFF;
+	background-color: #303030;
+	width: 80%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	opacity: 0;
+	overflow: hidden;
+	border-bottom-left-radius: 100%100px;
+	border-bottom-right-radius: 100%100px;  
+}
+
+.icons {
+	width: 20%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.icons img {
+	margin: 30px 15px 30px 15px;
 }
 
 .btn {
@@ -398,7 +439,7 @@ span a {
 	}
 	
 	#particles-js h1 {
-		font-size: 100%;
+		font-size: 200%;
 	}
 	
 	.profile {
@@ -412,7 +453,7 @@ span a {
 	
 	.profiletext {
 		width: 75%;
-		margin: 30px;
+		margin: 0 30px 30px 30px;
 	}
 	
 	#contact label {
@@ -441,6 +482,28 @@ span a {
 	.scrolldown {
 		width: 75px;
 		height: 75px;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+	#particles-js h1 {
+		font-size: 100%;
+	}
+	
+	#about {
+		width: 100%;
+	}
+	
+	#portfolio {
+		width: 100%;
+	}
+	
+	#contact {
+		width: 100%;
+	}
+	
+	#social {
+		width: 100%;
 	}
 }
 
