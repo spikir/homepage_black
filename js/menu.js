@@ -56,9 +56,6 @@ $(document).ready(function(){
 				if(slidearr[currentIndex1][slidePos]===false) {
 					slidearr[currentIndex1][slidePos]=true;
 					$(item).fadeTo(3000, 1);
-					if(windowPos>=$("#about").offset().top-700) {
-						$(".backtotop").fadeTo(3000,1);
-					}
 				}
 			} 
 			if(windowPos>=$("#social").offset().top-1000) {
@@ -72,6 +69,11 @@ $(document).ready(function(){
 				$('.navi li a[href="#contact"]').parent().addClass("active");
 			}
 		});
+		if(windowPos>$("#about").offset().top-400) {
+			$(".backtotop").slideDown(3000);			
+		} else if(windowPos<$("#about").offset().top-400) {
+			$(".backtotop").slideUp(3000);
+		}
 	});
 }); 
 
