@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>My site </title>
+		<title>Frontend || Backend Development</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" media="screen" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -72,7 +72,7 @@
 										<strong>you</strong> are looking to hire a programmer, do not hesitate to contact me.
 									</p>
 									<p>
-										<strong>you</strong> want to give suggestion how to improve my site, use contact formular below.
+										<strong>you</strong> want to give a suggestion how to improve my site, use contact formular below.
 									</p>
 									<p>
 										<strong>you</strong> like projects that I listed on this website and which deserve some attention, then you can visit my GitHub page and check out my repositories.
@@ -135,7 +135,7 @@
 					<h1>Contact</h1>
 					<div class="containerport">
 						<div class="innerleft" ng-controller="formController">
-							<form action="send_email.php" method="POST" ng-app="" name="form">
+							<form action="https://formspree.io/spikirard@gmail.com" method="POST" ng-app="" name="form">
 								<label>Name: </label><input type="text" placeholder="Name" name="name" ng-model="text1" required/>
 								<span ng-show="form.name.$touched && form.name.$invalid">The name is required</span>
 								<label>E-Mail: </label><input type="email" placeholder="E-Mail" name="email" ng-model="text2" required/>
@@ -143,7 +143,7 @@
 								<span ng-show="form.email.$error.email && form.email.$touched">Invalid email address</span>
 								<label>Comment: </label><textarea name="message" rows="10" cols="30" placeholder="Comment"  ng-model="text3" required></textarea>
 								<span ng-show="form.message.$touched && form.message.$invalid">Comment is required</span>
-								<button class="btn btnstyle">Submit</button>		
+								<button type="submit" class="btn btnstyle">Submit</button>		
 							</form>
 						</div>
 						<div class="innerright">

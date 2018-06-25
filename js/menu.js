@@ -6,6 +6,10 @@ $(document).ready(function(){
 	var currentIndex2 = '';
 	var slidePos = '';
 	
+	$(window).resize(function() {
+		$('#particles-js').css('height', $(window).innerHeight());
+	});
+	
 	$(window).on('beforeunload', function() {
 		$(window).scrollTop(0);
 	});
@@ -25,7 +29,7 @@ $(document).ready(function(){
 		array.push($(this).attr("href"));
 		slidearr.push([$(this).attr("href"), false]);
 	});
-
+	
 	function findIndex(valueToSearch, array) {
 		if(Array.isArray(array)) {
 			for(var i = 0; i < array.length; i++) {
@@ -42,6 +46,22 @@ $(document).ready(function(){
 			}
 		}
 	}
+	
+	function is_touch_device() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints;
+	};
+
+	if ( is_touch_device() ) {
+		$('.navi ul').addClass('touch');
+	} else {
+		$('.navi ul').addClass('no-touch');
+	} 
+	
+	$('.scrolldown').on('click', function() {
+		$('body').animate({
+			scrollTop: $('#about').offset().top - 50
+		}, 500);
+	});
 	
 	$(".backtotop").click(function(){
 		$('html, body').animate({
