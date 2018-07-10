@@ -67,8 +67,9 @@ $(document).ready(function(){
 	});
 	
 	$(".backtotop").click(function(){
+		$('#particles-js').css('height', "100vh");
 		$('html, body').animate({
-			scrollTop: $("#home").offset().top
+			scrollTop: 0
 		}, 500);
 	});
 	
